@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+
+    //js传递数据给java
+    function jsCallNativeDefault() {
+        window.WebViewJavascriptBridge.send({ 'param': "str1" }, function(responseData) { //处理java回传的数据
+
+        });
+    }
+
+    function jsCallNativeSpec() {
+        window.WebViewJavascriptBridge.callHandler(
+            'Spec' //指定接收参数 submitFromWeb与java一致
+            ,'指定接收'
+            ,function(responseData) { //处理java回传的数据
+
+            }
+        );
+    }
+    </script>
+    <style>
+    button {
+        background-color: cyan;
+        display: block;
+    }
+    </style>
+</head>
+
+<body>
+    <button onclick="jsCallNativeDefault()">JSBridge发送默认接收</button>
+    <button onclick="jsCallNativeSpec()">JSBridge发送指定接收<</button> </body> </html>

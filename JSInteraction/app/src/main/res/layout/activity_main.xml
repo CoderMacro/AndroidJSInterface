@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<!---->
+    <TextView
+        android:id="@+id/tv_a_1"
+        android:text="A-1、原生调用JS方案一\nloadUrl"
+        style="@style/CommonAccessoryView"
+         />
+
+    <TextView
+        android:layout_marginTop="1dp"
+        android:id="@+id/tv_a_2"
+        android:text="A-2、原生调用JS方案二\nevaluateJavascript"
+        style="@style/CommonAccessoryView"
+        />
+
+    <TextView
+        android:layout_marginTop="1dp"
+        android:id="@+id/tv_a_3"
+        android:text="A-3、原生调用JS方案三\nJavaScript Bridge"
+        style="@style/CommonAccessoryView"
+        />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tv_b_1"
+        android:text="B-1、JS调用原生方案一\n拦截链接"
+        style="@style/CommonAccessoryView"
+        />
+    <TextView
+        android:layout_marginTop="1dp"
+        android:id="@+id/tv_b_2"
+        android:text="B-2、JS调用原生方案二\nJavaScript Interface"
+        style="@style/CommonAccessoryView"
+        />
+    <TextView
+        android:layout_marginTop="1dp"
+        android:id="@+id/tv_b_3"
+        android:text="B-3、JS调用原生方案三\nJavaScript Bridge"
+        style="@style/CommonAccessoryView"
+        />
+
+</LinearLayout>

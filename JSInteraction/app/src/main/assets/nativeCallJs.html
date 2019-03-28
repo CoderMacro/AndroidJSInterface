@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+    function sum(a, b) {
+        var result = a + b;
+        document.getElementById('show').innerText = '计算 ' + a + '+' + b + ' = ' + result;
+        document.getElementById('result').innerText = '结果: ' + result;
+
+        return result;
+    }
+
+    //注册事件监听，初始化
+    function setupWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) {
+            callback(WebViewJavascriptBridge)
+        } else {
+            document.addEventListener(
+                'WebViewJavascriptBridgeReady',
+                function() {
+                    callback(WebViewJavascriptBridge)
+                },
+                false
+            );
+        }
+    }
+
+    //回调函数，接收java发送来的数据
+    setupWebViewJavascriptBridge(function(bridge) {
+        //默认接收
+        bridge.init(function(message, responseCallback) {
+            document.getElementById("show").innerHTML = '默认接收到Java的数据： ' + message;
+            var responseData = 'js默认接收完毕，并回传数据给java';
+            document.getElementById('result').style.display="none"
+            responseCallback(responseData); //回传数据给java
+        });
+
+        //指定接收，参数functionInJs 与java保持一致
+        bridge.registerHandler("JSFUCN", function(data, responseCallback) {
+        	document.getElementById("show").innerHTML = '指定接收到Java的数据： ' + data;
+            var responseData = 'js指定接收完毕，并回传数据给java';
+            document.getElementById('result').style.display="none"
+            responseCallback(responseData); //回传数据给java
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <div id="show">计算 x + y = ? </div>
+    <div id="result">结果: ? </div>
+</body>
+
+</html>

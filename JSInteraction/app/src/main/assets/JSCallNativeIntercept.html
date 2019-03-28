@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function openMyBlogNewTarget() {
+			window.open('https://www.jianshu.com/u/263c210b047c')
+		}
+		function openMyBlog() {
+			window.location.href = 'https://www.jianshu.com/u/263c210b047c'
+		}
+	</script>
+	<style>
+		a {
+			display: block;
+			padding: 5px;
+			background-color: #d4c3b2
+		}
+		button {
+			background-color: cyan;
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<a href="http://www.baidu.com" title="baidu" target="_blank">新标签页打开百度</a>
+	<a href="http://www.baidu.com" title="baidu" >当前页打开百度</a>
+
+	<button onclick='openMyBlogNewTarget()'>新标签打开我的博客</button>
+	<button onclick="openMyBlog()">打开我的博客</button>
+</body>
+</html>

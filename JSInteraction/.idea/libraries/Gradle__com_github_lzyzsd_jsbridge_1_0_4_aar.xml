@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.lzyzsd:jsbridge:1.0.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jsbridge-1.0.4.aar/c68bb2300702ee40f4410eade84b296e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jsbridge-1.0.4.aar/c68bb2300702ee40f4410eade84b296e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.lzyzsd/jsbridge/1.0.4/d4e8d67538046589736f6c9504e6bbcf5e0d8de5/jsbridge-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

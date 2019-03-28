@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function callNative() {
+			var amount = 123.5;
+			var orderno = "FG1afsdakewqr";
+			window.mobileApp.toPay(amount, orderno);
+		}
+	</script>
+	<style>
+		button {
+			background-color: cyan;
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<button onclick="window.mobileApp.sendMessage('特斯拉 Model 3')">获取商品名</button>
+	<button onclick="callNative()">支付按钮</button>
+</body>
+</html>
